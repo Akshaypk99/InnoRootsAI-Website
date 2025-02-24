@@ -1,0 +1,40 @@
+.footer {
+  background: url('/images/footer-bg.svg') no-repeat center;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  padding: 5%;
+
+  .sm-btns {
+    display: flex;
+    align-items: flex-end;
+
+    .icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 200px;
+      margin-bottom: 35px;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    .credits {
+      font-size: calc(13px + 3 * (100vw - 320px) / 1600);
+      ;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 10px;
+    li{
+      cursor: pointer;
+    }
+  }
+}

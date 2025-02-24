@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@font-face {
+  font-family: 'Aquatico';
+  src: url('/fonts/Aquatico-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Hoves Pro';
+  src: url('/fonts/TT-Hoves-Pro-Trial-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Hoves Pro';
+  src: url('/fonts/TT-Hoves-Pro-Trial-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+:root {
+  --primary-color: #0089E2;
+  --secondary-color: #E9EAE2;
+  --tertiary-color: #FDFCF7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--tertiary-color);
+  color: #000;
+  font-family: 'TT Hoves Pro', sans-serif;
+  overflow-x: hidden;
+}
+
+
+/* For WebKit Browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 5px; /* Adjust width */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color); /* Scroll thumb color */
+  border-radius: 4px; /* Optional: round corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker on hover */
+}
+
+/* Firefox Scrollbar */
+html {
+  scrollbar-color: var(--primary-color) #f1f1f1; /* Thumb and Track */
+  scrollbar-width: thin; /* "auto", "thin", or "none" */
+}
+
+
+
+p {
+  font-size: calc(14px + 4 * (100vw - 320px) / 1600);
+  letter-spacing: 0.05rem;
+  line-height: 1.2;
+}
+
+.main-title {
+  font-size: calc(36px + 4 * (100vw - 320px) / 1600);
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 10px;
+  letter-spacing: 0.1rem;
+}
+.sub-title{
+  font-size: calc(18px + 4 * (100vw - 320px) / 1600);
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+}
+.theme-btn{
+  font-size: calc(13px + 3 * (100vw - 320px) / 1600);
+  padding: calc(5px + .1875vw) calc(14px + .5vw);
+  border: none;
+  border-radius: 20px;
+  background-color: var(--primary-color);
+  color: #FDFCF7;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+}
+.theme-btn2{
+  background-color: #000;
+  border: none;
+  padding: calc(5px + .1875vw) calc(14px + .5vw);
+  border-radius: 20px;
+  color: #FDFCF7;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+}
