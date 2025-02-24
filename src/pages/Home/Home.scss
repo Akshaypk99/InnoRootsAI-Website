@@ -2,7 +2,7 @@
     background-color: var(--tertiary-color);
     .banner{
         min-height: 700px;
-        height: 100vh;
+        height: calc(100vh + 30px);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -59,7 +59,7 @@
             margin-bottom: 10px;
             
             h5{
-                font-size: calc(32px + 4 * (100vw - 320px) / 1600);
+                font-size: calc(35px + 4 * (100vw - 320px) / 1600);
                 text-transform: uppercase;
                 font-weight: 400;
                 margin-bottom: 10px;
@@ -68,6 +68,7 @@
             p{
                 max-width: 65%;
                 margin: 0 auto;
+                letter-spacing: 0.07rem;
             }
         }
     }
@@ -122,6 +123,7 @@
             padding: 50px 10px;
             border-top: 2px solid var(--secondary-color);
             border-bottom: 2px solid var(--secondary-color);
+            gap: 20px;
             .item{
                 display: flex;
                 gap: 10px;
@@ -133,8 +135,9 @@
                     flex-direction: column;
                     justify-content: space-between;
                     .count{
-                        font-size: calc(23px + 4 * (100vw - 320px) / 1600);
+                        font-size: calc(24px + 4 * (100vw - 320px) / 1600);
                         font-weight: 500;
+                        line-height: normal;
                     }
                     .description{
                         font-size: calc(14px + 3 * (100vw - 320px) / 1600);
@@ -244,6 +247,7 @@
             }
         }
         .sec-5{
+            overflow-x: hidden;
             .main-title{
                 padding: 0 10%;
                 text-align: start;
