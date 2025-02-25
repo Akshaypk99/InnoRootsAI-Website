@@ -1,7 +1,7 @@
 .fade-inview {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
   }
   
   .fade-inview.visible {

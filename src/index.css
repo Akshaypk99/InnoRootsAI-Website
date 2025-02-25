@@ -10,14 +10,42 @@
 @font-face {
   font-family: 'TT Hoves Pro';
   src: url('/fonts/TT-Hoves-Pro-Trial-Regular.woff') format('woff');
-  font-weight: normal;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Hoves Pro';
+  src: url('/fonts/TT-Hoves-Pro-Trial-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Hoves Pro';
+  src: url('/fonts/TT-Hoves-Pro-Trial-SemiBold.woff') format('woff');
+  font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'TT Hoves Pro';
   src: url('/fonts/TT-Hoves-Pro-Trial-Bold.woff') format('woff');
-  font-weight: bold;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Hoves Pro';
+  src: url('/fonts/TT-Hoves-Pro-Trial-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Hoves Pro';
+  src: url('/fonts/TT-Hoves-Pro-Trial-Black.woff') format('woff');
+  font-weight: 900;
   font-style: normal;
 }
 
@@ -69,7 +97,7 @@ html {
 
 p {
   font-size: calc(14px + 4 * (100vw - 320px) / 1600);
-  letter-spacing: 0.06rem;
+  letter-spacing: 0.07rem;
   line-height: 1.2;
 }
 
@@ -106,4 +134,20 @@ p {
   cursor: pointer;
   letter-spacing: 0.1rem;
   font-weight: 400;
+}
+
+@media(max-width:768px) {
+  .main-title {
+    font-size: calc(28px + 4 * (100vw - 320px) / 1600);
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 8px;
+    letter-spacing: 0.1rem;
+  }
+  .sub-title{
+    font-size: calc(16px + 4 * (100vw - 320px) / 1600);
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.06rem;
+  }
 }

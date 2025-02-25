@@ -29,9 +29,20 @@ const NavBar = () => {
       </div>
 
       {/* Hamburger Menu Button */}
-      <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
-        {menuOpen ? <FaTimes /> : <FaBars />}
-      </div>
+      <button className={`header-burger-btn burger ${menuOpen && 'burger--active'}`} data-test="header-burger" onClick={() => setMenuOpen(!menuOpen)}>
+        {menuOpen ?
+          <span className="js-header-burger-close-title visually-hidden" hidden="">Close Menu</span>
+          :
+          <span className="js-header-burger-open-title visually-hidden">Open Menu</span>
+        }
+        <div className="burger-box">
+          <div className="burger-inner header-menu-icon-tripleLineHamburger">
+            <div className="top-bun"></div>
+            <div className="patty"></div>
+            <div className="bottom-bun"></div>
+          </div>
+        </div>
+      </button>
 
       {/* Nav Links */}
       <div className={`navbar-right ${menuOpen ? "open" : ""}`}>

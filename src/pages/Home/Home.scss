@@ -149,7 +149,7 @@
     }
     .sec-5{
         // display: flex;
-        // overflow: hidden;
+        overflow: hidden;
         // justify-content: center;
         .main-title{
             text-align: center;
@@ -160,6 +160,7 @@
             position: relative;
             margin-top: 70px;
             margin-bottom: 70px;
+            // overflow: hidden;
             .grey-div{
                 position: absolute;
                 height: 125px;
@@ -213,9 +214,16 @@
             .offerings{
                 width: 80%;
                 margin-bottom: 40px;
-                padding: 20px;
+                padding: 25px;
+                .sub-title{
+                    max-width: 80%;
+                    margin: 0 auto;
+                }
                 p{
                     max-width: 100%;
+                }
+                h5{
+                    font-size: calc(30px + 4 * (100vw - 320px) / 1600);
                 }
             }
         }
@@ -243,6 +251,17 @@
                 .item{
                     width: 200px;
                     gap: 20px;
+                    img{
+                        width: 40px;
+                    }
+                    .contents{
+                        .count{
+                            font-size: calc(20px + 4 * (100vw - 320px) / 1600);
+                        }
+                        .description{
+                            font-size: calc(12px + 4 * (100vw - 320px) / 1600);
+                        }
+                    }
                 }
             }
         }
@@ -250,13 +269,14 @@
             overflow-x: hidden;
             .main-title{
                 padding: 0 10%;
-                text-align: start;
+                // text-align: start;
+                font-size: calc(28px + 4 * (100vw - 320px) / 1600);
             }
             .cross-div{
-                height: 100px;
+                height: 80px;
                 position: relative;
-                margin-top: 70px;
-                margin-bottom: 70px;
+                margin-top: 50px;
+                margin-bottom: 10px;
                 .grey-div{
                     position: absolute;
                     height: 70px;
@@ -275,6 +295,9 @@
                     background-color: var(--primary-color);
                 }
             }
+        }
+        .sec-6{
+            margin: 40px auto;
         }
     }
 }
