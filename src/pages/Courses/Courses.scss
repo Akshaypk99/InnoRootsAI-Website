@@ -1,4 +1,4 @@
-.about-us-page{
+.course-page{
     background-color: var(--tertiary-color);
     .sec-2{
         // display: flex;
@@ -15,7 +15,7 @@
     }
 }
 @media(max-width:768px) {
-    .about-us-page{
+    .course-page{
         .sec-2{
             border-radius: 0;
             top: 0;

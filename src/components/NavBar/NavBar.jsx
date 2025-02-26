@@ -50,7 +50,7 @@ const NavBar = () => {
         <ul>
           <li onClick={() => {setMenuOpen(false); navigate('/home')}}>Home</li>
           <li onClick={() => {setMenuOpen(false); navigate('/about-us')}}>About</li>
-          <li onClick={() => {setMenuOpen(false); navigate('/home')}}>Courses</li>
+          <li onClick={() => {setMenuOpen(false); navigate('/courses')}}>Courses</li>
           <li onClick={() => {setMenuOpen(false); navigate('/home')}}>Projects</li>
           <li onClick={() => {setMenuOpen(false); navigate('/home')}}>Contact</li>
         </ul>

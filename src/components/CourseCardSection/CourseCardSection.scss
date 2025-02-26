@@ -1,13 +1,14 @@
-.mission-vision{
+.course-card-container{
     display: flex;
     gap: 25px;
     justify-content: center;
     align-items: center;
     padding: 10px 5% 50px 5%;
+    flex-wrap: wrap;
     .card{
         border-radius: 25px;
         padding: 20px;
-        flex: 1;
+        flex: 1 1 calc(50% - 20px);;
         background: var(--secondary-color);
         .title-section{
             display: flex;
@@ -24,8 +25,11 @@
                 }
             }
             .main-title{
-                line-height: 100%;
+                font-size: 1.75rem;
+                line-height: 1.2;
                 margin: 0;
+                padding: 0 10px;
+                text-align: center;
             }
         }
         .img-container{
@@ -38,7 +42,7 @@
 }
 
 @media(max-width:768px) {
-    .mission-vision{
+    .course-card-container{
         display: flex;
         flex-direction: column;
         .card{

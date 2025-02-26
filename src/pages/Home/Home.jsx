@@ -4,6 +4,7 @@ import FadeInView from '../../components/FadeInView/FadeInView'
 import Banner from '../../components/Banner/Banner'
 import AboutSection from '../../components/AboutSection/AboutSection'
 import OfferingsSection from '../../components/OfferingsSection/OfferingsSection'
+import CourseIntroSection from '../../components/CourseIntroSection/CourseIntroSection'
 
 
 const Home = () => {
@@ -16,30 +17,7 @@ const Home = () => {
         <OfferingsSection />
       </div>
       <div className='sec-3'>
-        <div className='left'>
-
-        </div>
-        <div className='right'>
-          <FadeInView>
-            <div className='main-title'>
-              INNOROOTS AI <br />
-              COURSES
-            </div>
-          </FadeInView>
-          <FadeInView>
-            <p>
-              Learn Cutting-Edge Tech: Enroll in government-certified courses in AI and Robotics to stay ahead in today’s tech-driven world.
-            </p>
-          </FadeInView>
-          <button className='theme-btn2'>
-            Explore
-          </button>
-          <div className='overlay-vector'>
-            <div className='triangle'>
-
-            </div>
-          </div>
-        </div>
+        <CourseIntroSection />
       </div>
       {/* milestones */}
       <div className='sec-4'>

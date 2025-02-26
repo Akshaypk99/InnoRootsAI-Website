@@ -98,7 +98,7 @@ html {
 
 
 p {
-  font-size: calc(14px + 4 * (100vw - 320px) / 1600);
+  font-size: calc(15px + 1 * (100vw - 320px) / 1600);
   /* letter-spacing: 0.07rem; */
   line-height: normal;
 }
