@@ -9,7 +9,7 @@ const CourseCardSection = () => {
   return (
     <div className='course-card-container'>
       {courses?.map((item, index) => (
-      <div className="card">
+      <div className="card" key={index}>
         <div className="title-section">
           <div className="main-title">
             {item.title}

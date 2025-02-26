@@ -9,6 +9,7 @@ import NavBar from "./components/NavBar/NavBar";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import InvalidPage from "./pages/InvalidPage/InvalidPage";
 import Courses from "./pages/Courses/Courses";
+import ContactUs from "./pages/ContactUs/ContactUs";
 
 const Layout = () => {
   return (
@@ -20,6 +21,7 @@ const Layout = () => {
           <Route path="home" element={<Home />} />
           <Route path="about-us" element={<AboutUs />} />
           <Route path="courses" element={<Courses />} />
+          <Route path="contact" element={<ContactUs />} />
           <Route path="*" element={<InvalidPage />} />
         </Routes >
         <Footer />

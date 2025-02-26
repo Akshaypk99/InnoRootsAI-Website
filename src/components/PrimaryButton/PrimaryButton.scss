@@ -1,0 +1,27 @@
+.primary-btn{
+    border: none;
+    padding: 10px 70px 10px 25px;
+    border-radius: 50px;
+    position: relative;
+    width: fit-content;
+    background: var(--button-bgcolor);
+    color: #FFFBF0;
+    font-size: 1rem;
+    .arrow-icon{
+      position: absolute;
+      right: 4px;
+      top: 50%;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      transform: translateY(-50%);
+      background-color: #FFFBF0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      img{
+        width: 16px;
+      }
+    }
+  }

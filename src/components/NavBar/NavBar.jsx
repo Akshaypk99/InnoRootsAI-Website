@@ -52,7 +52,7 @@ const NavBar = () => {
           <li onClick={() => {setMenuOpen(false); navigate('/about-us')}}>About</li>
           <li onClick={() => {setMenuOpen(false); navigate('/courses')}}>Courses</li>
           <li onClick={() => {setMenuOpen(false); navigate('/home')}}>Projects</li>
-          <li onClick={() => {setMenuOpen(false); navigate('/home')}}>Contact</li>
+          <li onClick={() => {setMenuOpen(false); navigate('/contact')}}>Contact</li>
         </ul>
       </div>
     </div>
