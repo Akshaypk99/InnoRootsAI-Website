@@ -41,12 +41,12 @@
     flex-direction: column;
     gap: 20px;
     .info{
-      font-size: calc(16px + 4 * (100vw - 320px) / 1600);
-      line-height: 1.5;
+      font-size: calc(15px + 4 * (100vw - 320px) / 1600);
+      line-height: 1.2;
     }
     .career{
-      font-size: calc(17px + 4 * (100vw - 320px) / 1600);
-      line-height: 1.6;
+      font-size: calc(16px + 3 * (100vw - 320px) / 1600);
+      line-height: 1.3;
       font-weight: 500;
     }
     .sm-btns {
@@ -58,7 +58,7 @@
         flex-wrap: wrap;
         gap: 15px;
         // max-width: 300px;
-        margin-bottom: 35px;
+        margin-bottom: 25px;
         img {
           width: 28px;
           height: 28px;
@@ -71,7 +71,7 @@
       }
   
       .credits {
-        font-size: calc(18px + 4 * (100vw - 320px) / 1600);
+        font-size: calc(17px + 4 * (100vw - 320px) / 1600);
       }
     }
   }
@@ -91,7 +91,7 @@
       width: fit-content;
       font-size: calc(16px + 4 * (100vw - 320px) / 1600);
       line-height: 1.1;
-      letter-spacing: 0.08rem;
+      // letter-spacing: 0.08rem;
       transition: all 0.3s ease;
       img{
         height: 12px;

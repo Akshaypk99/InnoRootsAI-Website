@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./NavBar.scss";
 import logo from "../../assets/logo.svg";
-import { FaBars, FaTimes } from "react-icons/fa"; // Import icons for hamburger menu
+import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
+  const navigate = useNavigate()
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -47,11 +48,11 @@ const NavBar = () => {
       {/* Nav Links */}
       <div className={`navbar-right ${menuOpen ? "open" : ""}`}>
         <ul>
-          <li onClick={() => setMenuOpen(false)}>Home</li>
-          <li onClick={() => setMenuOpen(false)}>About</li>
-          <li onClick={() => setMenuOpen(false)}>Courses</li>
-          <li onClick={() => setMenuOpen(false)}>Projects</li>
-          <li onClick={() => setMenuOpen(false)}>Contact</li>
+          <li onClick={() => {setMenuOpen(false); navigate('/home')}}>Home</li>
+          <li onClick={() => {setMenuOpen(false); navigate('/about-us')}}>About</li>
+          <li onClick={() => {setMenuOpen(false); navigate('/home')}}>Courses</li>
+          <li onClick={() => {setMenuOpen(false); navigate('/home')}}>Projects</li>
+          <li onClick={() => {setMenuOpen(false); navigate('/home')}}>Contact</li>
         </ul>
       </div>
     </div>

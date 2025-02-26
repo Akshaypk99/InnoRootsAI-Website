@@ -1,0 +1,39 @@
+.about-us-section{
+    padding: 50px 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // gap: 40px;
+    .content{
+        .main-title{
+            margin-bottom: calc(12px + .625vw);
+        }
+        padding-right: 10%;
+        p{
+            margin-bottom: 15px;
+        }
+        button{
+            margin-bottom: 10px;
+        }
+    }
+    .img-container{
+        height: 500px;
+        min-width: 300px;
+        background: var(--secondary-color);
+    }
+}
+@media(max-width:768px) {
+    .about-us-section{
+        flex-direction: column;
+        .content{
+            padding: 0;
+            button{
+                margin-bottom: 15px;
+            }
+        }
+        .img-container{
+            width: 100%;
+        }
+        
+    }
+}

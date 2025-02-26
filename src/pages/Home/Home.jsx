@@ -1,53 +1,19 @@
 import React from 'react'
 import './Home.scss'
-import NavBar from '../../components/NavBar/NavBar'
-import Footer from '../../components/Footer/Footer'
 import FadeInView from '../../components/FadeInView/FadeInView'
-import TextTransition from '../../components/TextTransition/TextTransition'
+import Banner from '../../components/Banner/Banner'
+import AboutSection from '../../components/AboutSection/AboutSection'
+import OfferingsSection from '../../components/OfferingsSection/OfferingsSection'
 
 
 const Home = () => {
   return (
     <div className='home-page'>
-      <NavBar />
-      <div className='banner'>
-        <div className='title'>
-          AN INVITATION TO <br /> DREAM BIGGER
-        </div>
-      </div>
+      <Banner />
 
       <div className='sec-2'>
-        <div className='about-us'>
-          <div className='content'>
-            <FadeInView>
-              <div className='main-title'>ABOUT US</div>
-            </FadeInView>
-            <FadeInView>
-              <p>InnoRootsAI is a pioneering initiative in robotics and AI education, dedicated to fostering innovation, creativity, and technological expertise. As a provider of comprehensive training solutions, we aim to equip individuals and communities with the skills and knowledge needed to thrive in the rapidly evolving fields of robotics and artificial intelligence. At InnoRoots, we believe that technology should be an enabler for everyone, regardless of background or expertise.</p>
-            </FadeInView>
-            <button className='theme-btn'>
-              Learn more
-            </button>
-          </div>
-          <div className='img-container'>
-            <img src='' alt='about-us' />
-          </div>
-        </div>
-        <div className='offerings'>
-          <FadeInView>
-            <div className='sub-title'>We are offering AI, ML and Robotics</div>
-            <h5>COURSES</h5>
-          </FadeInView>
-          {/* <FadeInView>
-            <p>
-              Step into the forefront of intelligent technology with InnoRootsAI, your trusted provider for
-              Robotics and AI training. Explore cutting-edge AI, Machine Learning, and Robotics courses,
-              designed to spark innovation and empower learners at every level. At InnoRootsAI, we’re not just shaping minds—we’re shaping the future.
-            </p>
-          </FadeInView> */}
-          <TextTransition
-          text={"Step into the forefront of intelligent technology with InnoRootsAI, your trusted provider for Robotics and AI training. Explore cutting-edge AI, Machine Learning, and Robotics courses, designed to spark innovation and empower learners at every level. At InnoRootsAI, we’re not just shaping minds—we’re shaping the future."} />
-        </div>
+        <AboutSection/>
+        <OfferingsSection />
       </div>
       <div className='sec-3'>
         <div className='left'>
@@ -144,9 +110,6 @@ const Home = () => {
 
         </div>
       </div>
-
-
-      <Footer />
     </div>
   )
 }
