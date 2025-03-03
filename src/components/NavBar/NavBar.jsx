@@ -24,7 +24,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <div className={`navbar ${scrolled ? "scrolled" : ""}`}>
+    <div className={`navbar-container ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-left">
         {/* <img className='' src={logo} /> */}
       </div>

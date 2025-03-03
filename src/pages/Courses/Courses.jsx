@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Courses.scss'
 import Banner from '../../components/Banner/Banner'
 import OfferingsSection from '../../components/OfferingsSection/OfferingsSection'
-import CourseIntroSection from '../../components/CourseIntroSection/CourseIntroSection'
 import CourseCardSection from '../../components/CourseCardSection/CourseCardSection'
 
 
 const Courses = () => {
+  useEffect(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, []);
   return (
     <div className='course-page'>
       <Banner />

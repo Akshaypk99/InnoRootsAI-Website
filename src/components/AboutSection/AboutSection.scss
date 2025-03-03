@@ -1,15 +1,17 @@
 .about-us-section{
-    padding: 50px 10%;
+    padding: 2rem 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     // gap: 40px;
     .content{
+        // width: 60%;
         .main-title{
             margin-bottom: calc(12px + .625vw);
         }
         padding-right: 10%;
         p{
+            // width: 70%;
             margin-bottom: 15px;
         }
         button{
@@ -17,8 +19,8 @@
         }
     }
     .img-container{
-        height: 500px;
-        min-width: 300px;
+        height: 600px;
+        min-width: 450px;
         background: var(--secondary-color);
     }
 }
@@ -36,5 +38,14 @@
             height: 370px;
         }
         
+    }
+}
+@media (min-width: 1400px){
+    .about-us-section{
+        .content{
+            p{
+                padding-right: 15%;
+            }
+        }
     }
 }

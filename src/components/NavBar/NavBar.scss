@@ -1,9 +1,9 @@
-.navbar {
+.navbar-container {
     width: 90%;
     padding: 2% 4%;
     display: flex;
     justify-content: space-between;
-    position: fixed;
+    position: absolute;
     top: 50px;
     left: 50%;
     /* Move the left edge to the center */
@@ -20,7 +20,7 @@
         padding: 1.5% 4%;
         top: 30px;
         backdrop-filter: blur(10px);
-        opacity: 0;
+        // opacity: 0;
     }
 
     .navbar-left {
@@ -143,7 +143,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 @media (max-width: 768px) {
-    .navbar {
+    .navbar-container {
 
         .header-burger-btn {
             display: block;

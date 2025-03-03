@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './ContactUs.scss'
 import Banner from '../../components/Banner/Banner'
 import PrimaryButton from '../../components/PrimaryButton/PrimaryButton'
 
 
 const ContactUs = () => {
+  useEffect(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, []);
   return (
     <div className='contact-us-page'>
       <Banner />

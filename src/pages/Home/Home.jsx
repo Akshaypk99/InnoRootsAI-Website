@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Home.scss'
 import FadeInView from '../../components/FadeInView/FadeInView'
 import Banner from '../../components/Banner/Banner'
@@ -8,12 +8,17 @@ import CourseIntroSection from '../../components/CourseIntroSection/CourseIntroS
 
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <div className='home-page'>
       <Banner />
 
       <div className='sec-2'>
-        <AboutSection/>
+        <div className='container mx-auto'>
+          <AboutSection />
+        </div>
         <OfferingsSection />
       </div>
       <div className='sec-3'>
@@ -22,48 +27,50 @@ const Home = () => {
       {/* milestones */}
       <div className='sec-4'>
         {/* <FadeInView> */}
-        <div className='mile-stones'>
-          <div className='item'>
-            <img src='/images/home/icons/students.svg' alt='students' />
-            <div className='contents'>
-              <div className='count'>
-                800+
-              </div>
-              <div className='description'>
-                Students
-              </div>
-            </div>
-          </div>
-          <div className='item'>
-            <img src='/images/home/icons/course.svg' alt='course' />
-            <div className='contents'>
-              <div className='count'>
-                50+
-              </div>
-              <div className='description'>
-                Courses
+        <div className="container">
+          <div className='mile-stones'>
+            <div className='item'>
+              <img src='/images/home/icons/students.svg' alt='students' />
+              <div className='contents'>
+                <div className='count'>
+                  800+
+                </div>
+                <div className='description'>
+                  Students
+                </div>
               </div>
             </div>
-          </div>
-          <div className='item'>
-            <img src='/images/home/icons/certificates.svg' alt='certificates' />
-            <div className='contents'>
-              <div className='count'>
-                150
-              </div>
-              <div className='description'>
-                Certificates Issued
+            <div className='item'>
+              <img src='/images/home/icons/course.svg' alt='course' />
+              <div className='contents'>
+                <div className='count'>
+                  50+
+                </div>
+                <div className='description'>
+                  Courses
+                </div>
               </div>
             </div>
-          </div>
-          <div className='item'>
-            <img src='/images/home/icons/affiliation.svg' alt='affiliation' />
-            <div className='contents'>
-              <div className='count'>
-                08
+            <div className='item'>
+              <img src='/images/home/icons/certificates.svg' alt='certificates' />
+              <div className='contents'>
+                <div className='count'>
+                  150
+                </div>
+                <div className='description'>
+                  Certificates Issued
+                </div>
               </div>
-              <div className='description'>
-                Affiliations
+            </div>
+            <div className='item'>
+              <img src='/images/home/icons/affiliation.svg' alt='affiliation' />
+              <div className='contents'>
+                <div className='count'>
+                  08
+                </div>
+                <div className='description'>
+                  Affiliations
+                </div>
               </div>
             </div>
           </div>

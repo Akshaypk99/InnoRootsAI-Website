@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './AboutUs.scss'
 import FadeInView from '../../components/FadeInView/FadeInView'
 import Banner from '../../components/Banner/Banner'
@@ -9,6 +9,9 @@ import CourseIntroSection from '../../components/CourseIntroSection/CourseIntroS
 
 
 const AboutUs = () => {
+  useEffect(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, []);
   return (
     <div className='about-us-page'>
       <Banner />
