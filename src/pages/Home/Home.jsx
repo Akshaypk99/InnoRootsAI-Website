@@ -6,6 +6,8 @@ import AboutSection from '../../components/AboutSection/AboutSection'
 import OfferingsSection from '../../components/OfferingsSection/OfferingsSection'
 import CourseIntroSection from '../../components/CourseIntroSection/CourseIntroSection'
 import IconSlider from '../../components/IconSlider/IconSlider'
+import CountUp from 'react-countup'
+import { useInView } from 'react-intersection-observer'
 
 
 const Home = () => {
@@ -22,6 +24,13 @@ const Home = () => {
     "/images/industrial-partners/open-robotics.svg",
     "/images/industrial-partners/ros-ar21.svg",
   ]
+  const milestones = [
+    { img: "/images/home/icons/students.svg", count: 7000, label: "Students", showPlus: true },
+    { img: "/images/home/icons/course.svg", count: 50, label: "Courses", showPlus: true },
+    { img: "/images/home/icons/certificates.svg", count: 3000, label: "Certificates Issued", showPlus: true },
+    { img: "/images/home/icons/affiliation.svg", count: 8, label: "Affiliations", showPlus: false },
+  ];
+
 
   return (
     <div className='home-page'>
@@ -41,50 +50,21 @@ const Home = () => {
         {/* <FadeInView> */}
         <div className="container">
           <div className='mile-stones'>
-            <div className='item'>
-              <img src='/images/home/icons/students.svg' alt='students' />
-              <div className='contents'>
-                <div className='count'>
-                  7000+
+            {milestones.map((item, index) => {
+              const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
+              return (
+                <div className="item" key={index} ref={ref}>
+                  <img src={item.img} alt={item.label} />
+                  <div className="contents">
+                    <div className="count">
+                      {inView ? <CountUp start={0} end={item.count} duration={2.5} /> : "0"}
+                      {item.showPlus && "+"} {/* Only show "+" when `showPlus` is true */}
+                    </div>
+                    <div className="description">{item.label}</div>
+                  </div>
                 </div>
-                <div className='description'>
-                  Students
-                </div>
-              </div>
-            </div>
-            <div className='item'>
-              <img src='/images/home/icons/course.svg' alt='course' />
-              <div className='contents'>
-                <div className='count'>
-                  50+
-                </div>
-                <div className='description'>
-                  Courses
-                </div>
-              </div>
-            </div>
-            <div className='item'>
-              <img src='/images/home/icons/certificates.svg' alt='certificates' />
-              <div className='contents'>
-                <div className='count'>
-                  3000+
-                </div>
-                <div className='description'>
-                  Certificates Issued
-                </div>
-              </div>
-            </div>
-            <div className='item'>
-              <img src='/images/home/icons/affiliation.svg' alt='affiliation' />
-              <div className='contents'>
-                <div className='count'>
-                  08
-                </div>
-                <div className='description'>
-                  Affiliations
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
         {/* </FadeInView> */}

@@ -38,6 +38,10 @@
                         font-size: 2rem;
                         font-weight: 500;
                         line-height: normal;
+                        opacity: 0;
+                        transform: translateY(10px);
+                        animation: fadeInUp 3s ease-in-out forwards;
+
                     }
                     .description{
                         font-size: 1.2rem;
@@ -72,19 +76,6 @@
                 display: flex;
                 align-items: center;
                 gap: 20px;
-                .icon-container {
-                    display: flex;
-                    gap: 30px;
-                    animation-timing-function: linear;
-                    animation-iteration-count: infinite;
-                    animation-fill-mode: forwards;
-                    white-space: nowrap;
-                    // animation: moveRight 30s linear infinite;
-                    img {
-                      max-height: 70px;
-                      width: 200px;
-                    }
-                  }
                 }
             .blue-div{
                 position: absolute;
@@ -98,19 +89,6 @@
                 align-items: center;
                 gap: 30px;
                 overflow: hidden;
-                .icon-container {
-                    display: flex;
-                    gap: 30px;
-                    animation-timing-function: linear;
-                    animation-iteration-count: infinite;
-                    animation-fill-mode: forwards;
-                    white-space: nowrap;
-                    animation: moveLeft 30s linear infinite;
-                    img {
-                      max-height: 70px;
-                      width: 200px;
-                    }
-                }
             }
         }
     }
@@ -135,7 +113,8 @@
         }
         // .sec-3{}
         .sec-4{
-            padding: 50px 10%;
+            padding: 50px 8%;
+            margin: 0;
             .mile-stones{
                 display: flex;
                 flex-direction: column;
@@ -163,7 +142,7 @@
         .sec-5{
             overflow-x: hidden;
             .main-title{
-                padding: 0 10%;
+                padding: 0 8%;
                 // text-align: start;
                 font-size: calc(28px + 4 * (100vw - 320px) / 1600);
             }
@@ -229,21 +208,13 @@
     }
 }
 
-// Animations for smooth movement
-@keyframes moveRight {
-    from {
-      transform: translateX(-100%);
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
     }
-    to {
-      transform: translateX(100%);
-    }
-  }
-  
-  @keyframes moveLeft {
-    from {
-      transform: translateX(100%);
-    }
-    to {
-      transform: translateX(-100%);
+    100% {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
