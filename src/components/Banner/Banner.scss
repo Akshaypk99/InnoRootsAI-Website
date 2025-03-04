@@ -8,6 +8,16 @@
     .title{
         color: #fff;
         font-family: 'Aquatico', sans-serif;
-        font-size: 4rem;
+        font-size: 3.25rem;
+        line-height: 1.2;
+        text-align: center;
     }
 }
+@media (min-width: 1400px){
+    .banner{
+        .title{
+            font-size: 3.75rem;
+            line-height: 1.3;
+        }
+    }
+  }

@@ -10,14 +10,16 @@ import CourseIntroSection from '../../components/CourseIntroSection/CourseIntroS
 
 const AboutUs = () => {
   useEffect(() => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }, []);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <div className='about-us-page'>
       <Banner />
 
       <div className='sec-2'>
-        <AboutSection />
+        <div className='container mx-auto'>
+          <AboutSection />
+        </div>
         <MissionVision />
         <OfferingsSection />
       </div>

@@ -187,3 +187,15 @@ button::-moz-focus-inner, input::-moz-focus-inner {
         }
     }
 }
+
+@media (min-width: 1400px){
+    .navbar-container {
+        .navbar-right {
+            ul {
+                li {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+}

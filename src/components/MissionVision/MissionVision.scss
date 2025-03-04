@@ -46,3 +46,16 @@
         }
     }
 }
+
+@media (min-width: 1400px){
+    .mission-vision{
+        .card{
+            .title-section{
+                padding: 25px 0 35px 0;
+            }
+            .img-container{
+                height: 320px;
+            }
+        }
+    }
+}
