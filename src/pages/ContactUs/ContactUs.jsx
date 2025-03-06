@@ -6,8 +6,8 @@ import PrimaryButton from '../../components/PrimaryButton/PrimaryButton'
 
 const ContactUs = () => {
   useEffect(() => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }, []);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <div className='contact-us-page'>
       <Banner />
@@ -43,11 +43,12 @@ const ContactUs = () => {
                   <label htmlFor="phone">Contact Number</label>
                 </div>
               </div>
-
               {/* Message Textarea */}
-              <div className="form-group last">
-                <textarea id="message" placeholder=" " required rows="4"></textarea>
-                <label htmlFor="message">Message</label>
+              <div className='row'>
+                <div className="form-group last">
+                  <textarea id="message" placeholder=" " required rows="4"></textarea>
+                  <label htmlFor="message">Message</label>
+                </div>
               </div>
             </form>
             <div className='btn-container mobile'>

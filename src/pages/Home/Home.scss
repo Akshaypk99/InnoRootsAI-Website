@@ -34,6 +34,7 @@
                     flex-direction: column;
                     justify-content: space-between;
                     font-family: "Inter";
+                    width: max-content;
                     .count{
                         font-size: 2rem;
                         font-weight: 500;
@@ -46,6 +47,7 @@
                     .description{
                         font-size: 1.2rem;
                         font-weight: 400;
+                        width: max-content;
                     }
                 }
             }
@@ -100,11 +102,42 @@
             background: var(--secondary-color);
             margin: 0 auto;
             margin-top: 25px;
-            height: 200px;
+            // height: 200px;
+            padding: 2rem 4rem;
             border-radius: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+            align-items: center;
+            img {
+                max-height: 80px; // Fixed height for consistency
+                width: auto; // Maintain aspect ratio
+                max-width: 100%; // Prevents overflow
+                object-fit: contain; // Ensures images fit within the given height without stretching
+                transition: transform 0.3s ease;
+
+                &:hover {
+                  transform: scale(1.05);
+                }
+              }
         }
     }
 }
+@media(max-width:1024px) {
+    .home-page{
+        .sec-6{
+            .certificates{
+                justify-content: space-around;
+                gap: 50px;
+                img{
+
+                }
+            }
+        }
+    }
+}
+
 @media(max-width:768px) {
     .home-page{
         .sec-2{
@@ -155,9 +188,9 @@
                     position: absolute;
                     height: 70px;
                     width: 105%;
-                    top: -22%;
+                    top: -30%;
                     background-color: #D9D9D9;
-                    transform: rotate(1.5deg);
+                    transform: rotate(2deg);
                 }
                 .blue-div{
                     position: absolute;
@@ -172,9 +205,48 @@
         }
         .sec-6{
             margin: 40px auto;
+            .certificates{
+                padding: 4rem 4rem;
+                flex-direction: column;
+                gap: 60px;
+                img{
+                    // max-height: 100% !important;
+                    // max-width: 100% !important;
+                }
+            }
         }
     }
 }
+@media (max-width: 480px) {
+    .home-page{
+        .sec-6{
+            .certificates{
+                img{
+                  &.img-nassscom{
+                    // max-width: 140px;
+                  }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1280px){
+    .home-page{
+        .sec-6{
+            .certificates{
+                img{
+                    max-height: 70px;
+                    &.img-nasscom{
+                        max-width: 150px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 @media (min-width: 1400px){
     .home-page{
         .sec-4 .mile-stones .item{
@@ -202,6 +274,13 @@
                     width: 105%;
                     transform: rotate(-2.7deg) translateY(-50%);
                     background-color: var(--primary-color);
+                }
+            }
+        }
+        .sec-6{
+            .certificates{
+                img{
+                  
                 }
             }
         }

@@ -10,6 +10,7 @@ import AboutUs from "./pages/AboutUs/AboutUs";
 import InvalidPage from "./pages/InvalidPage/InvalidPage";
 import Courses from "./pages/Courses/Courses";
 import ContactUs from "./pages/ContactUs/ContactUs";
+import CourseDetails from "./pages/CourseDetails/CourseDetails";
 
 const Layout = () => {
   return (
@@ -17,10 +18,11 @@ const Layout = () => {
       <div className="app-content" >
         <NavBar />
         <Routes >
-          <Route index element={<Navigate to="/home" />} />
-          <Route path="home" element={<Home />} />
+          {/* <Route index element={<Navigate to="/home" />} /> */}
+          <Route path="/" element={<Home />} />
           <Route path="about-us" element={<AboutUs />} />
           <Route path="courses" element={<Courses />} />
+          <Route path="courses/:title" element={<CourseDetails />} />
           <Route path="contact" element={<ContactUs />} />
           <Route path="*" element={<InvalidPage />} />
         </Routes >

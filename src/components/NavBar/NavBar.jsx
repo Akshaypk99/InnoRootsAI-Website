@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./NavBar.scss";
-import logo from "../../assets/logo.svg";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const NavBar = () => {
+  const location = useLocation();
   const navigate = useNavigate()
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -26,7 +26,7 @@ const NavBar = () => {
   return (
     <div className={`navbar-container ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-left">
-        {/* <img className='' src={logo} /> */}
+        <img className='logo' src={'/logo-dark.svg'} alt="logo" />
       </div>
 
       {/* Hamburger Menu Button */}
@@ -48,11 +48,16 @@ const NavBar = () => {
       {/* Nav Links */}
       <div className={`navbar-right ${menuOpen ? "open" : ""}`}>
         <ul>
-          <li onClick={() => {setMenuOpen(false); navigate('/home')}}>Home</li>
-          <li onClick={() => {setMenuOpen(false); navigate('/about-us')}}>About</li>
-          <li onClick={() => {setMenuOpen(false); navigate('/courses')}}>Courses</li>
-          <li onClick={() => {setMenuOpen(false); navigate('/home')}}>Projects</li>
-          <li onClick={() => {setMenuOpen(false); navigate('/contact')}}>Contact</li>
+          <li className={location.pathname === "/" ? "active" : ""}
+           onClick={() => {setMenuOpen(false); navigate('/')}}>Home</li>
+          <li className={location.pathname === "/about-us" ? "active" : ""}
+           onClick={() => {setMenuOpen(false); navigate('/about-us')}}>About</li>
+          <li className={location.pathname === "/courses" ? "active" : ""}
+           onClick={() => {setMenuOpen(false); navigate('/courses')}}>Courses</li>
+          {/* <li className={location.pathname === "/projects" ? "active" : ""}
+           onClick={() => {setMenuOpen(false); navigate('/')}}>Projects</li> */}
+          <li className={location.pathname === "/contact" ? "active" : ""}
+           onClick={() => {setMenuOpen(false); navigate('/contact')}}>Contact</li>
         </ul>
       </div>
     </div>

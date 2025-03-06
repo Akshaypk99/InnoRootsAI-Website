@@ -17,7 +17,7 @@ const AboutSection = () => {
         </button>
       </div>
       <div className='img-container'>
-        {/* <img src='' alt='about-us' /> */}
+        <img src='/images/home/about.jpg' alt='about-us' />
       </div>
     </div>
   )

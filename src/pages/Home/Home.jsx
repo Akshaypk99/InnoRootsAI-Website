@@ -17,24 +17,31 @@ const Home = () => {
 
   const INDUSTRIAL_PARTNERS = [
     "/images/industrial-partners/aws.svg",
-    "/images/industrial-partners/google-colab.svg",
+    "/images/industrial-partners/collab.svg",
     "/images/industrial-partners/microsoft.svg",
     "/images/industrial-partners/nvidia.svg",
     "/images/industrial-partners/openai.svg",
     "/images/industrial-partners/open-robotics.svg",
-    "/images/industrial-partners/ros-ar21.svg",
+    "/images/industrial-partners/ros.svg",
+  ]
+  const CERTIFICATIONS = [
+    {title: "nsdc", img:"/images/certifications/nsdc.svg"},
+    {title: "nvidia", img:"/images/certifications/nvidia.svg"},
+    {title: "nsme", img:"/images/certifications/nsme.svg"},
+    {title: "nasscom", img:"/images/certifications/nasscom.svg"},
+    {title: "ctds", img:"/images/certifications/ctds.svg"},
   ]
   const milestones = [
-    { img: "/images/home/icons/students.svg", count: 7000, label: "Students", showPlus: true },
-    { img: "/images/home/icons/course.svg", count: 50, label: "Courses", showPlus: true },
-    { img: "/images/home/icons/certificates.svg", count: 3000, label: "Certificates Issued", showPlus: true },
-    { img: "/images/home/icons/affiliation.svg", count: 8, label: "Affiliations", showPlus: false },
+    { img: "/images/home/icons/students.svg", count: 7000, label: "Students", showPlus: true, duration: 2.5 },
+    { img: "/images/home/icons/course.svg", count: 50, label: "Courses", showPlus: true, duration: 1 },
+    { img: "/images/home/icons/certificates.svg", count: 3000, label: "Certificates Issued", showPlus: true, duration: 2.5 },
+    { img: "/images/home/icons/affiliation.svg", count: 8, label: "Affiliations", showPlus: false, duration: 1 },
   ];
 
 
   return (
     <div className='home-page'>
-      <Banner />
+      <Banner page={'home'}/>
 
       <div className='sec-2'>
         <div className='container mx-auto'>
@@ -57,7 +64,7 @@ const Home = () => {
                   <img src={item.img} alt={item.label} />
                   <div className="contents">
                     <div className="count">
-                      {inView ? <CountUp start={0} end={item.count} duration={2.5} /> : "0"}
+                      {inView ? <CountUp start={0} end={item.count} duration={item.duration} /> : "0"}
                       {item.showPlus && "+"} {/* Only show "+" when `showPlus` is true */}
                     </div>
                     <div className="description">{item.label}</div>
@@ -88,7 +95,9 @@ const Home = () => {
           <div className='sub-title'>Here are the prestigious affiliations and certifications we provide</div>
         </FadeInView>
         <div className='certificates'>
-
+          {CERTIFICATIONS.map((item, idx) => (
+            <img src={item.img} key={idx} alt={item.title} className={`img-${item.title}`} />
+          ))}
         </div>
       </div>
     </div>

@@ -1,9 +1,16 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom";
 import './Footer.scss'
+
 const Footer = () => {
+  const navigate = useNavigate();
+
   return (
     <div className='footer'>
       <div className='left'>
+        <div className="logo-container">
+          <img className='logo' src='/logo.svg' alt='logo' />
+        </div>
         <div className="text">
           Discover the <br/>
           Future with InnoRoots AI
@@ -16,19 +23,19 @@ const Footer = () => {
         </div>
       </div>
       <ul className='menu-options'>
-        <li>
+        <li onClick={() => { navigate('/')}}>
           Home
           <img src='/images/icons/menu-arrow.svg' />
         </li>
-        <li>
+        <li  onClick={() => { navigate('/about-us')}}>
           About
           <img src='/images/icons/menu-arrow.svg' />
         </li>
-        <li>
+        <li onClick={() => { navigate('/courses')}}>
           Courses
           <img src='/images/icons/menu-arrow.svg' />
         </li>
-        <li className='seperator'>
+        <li className='seperator'  onClick={() => { navigate('/contact')}}>
           Contact Us
           <img src='/images/icons/menu-arrow.svg' />
         </li>
