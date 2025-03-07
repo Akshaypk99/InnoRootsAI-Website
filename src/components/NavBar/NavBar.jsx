@@ -23,6 +23,18 @@ const NavBar = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden"; // Disable scrolling
+    } else {
+      document.body.style.overflow = ""; // Enable scrolling
+    }
+
+    return () => {
+      document.body.style.overflow = ""; // Cleanup on unmount
+    };
+  }, [menuOpen]);
+
   return (
     <div className={`navbar-container ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-left">

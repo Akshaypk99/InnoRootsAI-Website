@@ -1,4 +1,4 @@
-.primary-btn-container {
+.explore-btn-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,17 +11,17 @@
     margin-top: 2rem; // lg:mt-8 equivalent
   }
 
-  .primary-btn {
+  .exp-btn {
     position: relative;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     font-size: 0.875rem; // text-sm
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 0.05em;
-    color: #FFFBF0;
+    color: #000;
     padding: 0.75rem 1.5rem;
     background: transparent;
-    border: none;
     z-index: 10;
+    border: none;
   }
 
   .bg-effect {
@@ -29,9 +29,10 @@
     inset: 0;
     height: 100%;
     width: 100%;
-    background-color: var(--button-bgcolor);
+    background-color: transparent;
     border-radius: 9999px;
     transition: all 0.5s ease-out;
+    border: 1px #000 solid;
   }
   
 
@@ -45,13 +46,13 @@
     justify-content: center;
     width: 50px;
     height: 50px;
-    background-color: #FFFBF0;
-    border: 4px solid var(--button-bgcolor);
+    background-color: #D9D9D9;
+    border: 4px solid #D9D9D9;
     border-radius: 50%;
     transition: all 0.3s ease-in-out 0.3s;
     z-index: 20;
     &:hover {
-      border-color: #FFFBF0;
+      border-color: #D9D9D9;
       transition-delay: 0s;
     }
 
@@ -65,7 +66,7 @@
   }
   &:hover{
     .arrow-icon {
-      border-color: #FFFBF0;
+      border-color: #D9D9D9;
     }
   }
 }

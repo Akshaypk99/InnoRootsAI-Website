@@ -7,8 +7,8 @@ import CourseCardSection from '../../components/CourseCardSection/CourseCardSect
 
 const Courses = () => {
   useEffect(() => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }, []);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <div className='course-page'>
       <Banner />

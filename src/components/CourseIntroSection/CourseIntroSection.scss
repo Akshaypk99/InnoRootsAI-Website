@@ -4,6 +4,7 @@
 
     .left {
         width: 50%;
+        height: 450px;
         background: var(--primary-color);
         position: relative;
         overflow: hidden; /* Ensures video doesn't overflow */
@@ -16,7 +17,7 @@
     }
 
     .right {
-        padding: 7rem 10% 8rem 6rem;
+        padding: 7rem 10% 5rem 6rem;
         width: 50%;
         background-color: var(--secondary-color);
         position: relative;
@@ -56,6 +57,16 @@
     }
 
 }
+@media(max-width:991px) {
+    .course-intro-section{
+        .right{
+            padding: 6rem 4rem 4rem 4rem;
+            .main-title{
+                font-size: 2rem;
+            }
+        }
+    }
+}
 
 @media(max-width:768px) {
     .course-intro-section {
@@ -69,11 +80,23 @@
         }
 
         .right {
+            padding: 7rem 10% 5rem 6rem;
             .main-title{
                 font-size: calc(28px + 4 * (100vw - 320px) / 1600);
             }
             width: 100%;
             padding: 50px 5%;
+        }
+    }
+}
+
+@media (min-width: 1400px){
+    .course-intro-section{
+        .left{
+            height: 500px;
+        }
+        .right{
+            padding: 8rem 10% 5rem 6rem;
         }
     }
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
 import './Footer.scss'
+import ExploreButton from '../ExploreButton/ExploreButton';
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -15,12 +16,13 @@ const Footer = () => {
           Discover the <br/>
           Future with InnoRoots AI
         </div>
-        <div className='explore-btn'>
+        {/* <div className='explore-btn'>
           Explore Now
           <div className="arrow-icon">
             <img src='/images/icons/button-arrow.svg' alt='arrow'/>
           </div>
-        </div>
+        </div> */}
+        <ExploreButton text={"Explore Now"} />
       </div>
       <ul className='menu-options'>
         <li onClick={() => { navigate('/')}}>

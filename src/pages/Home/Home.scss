@@ -126,6 +126,18 @@
 }
 @media(max-width:1024px) {
     .home-page{
+        .sec-4 {
+            .mile-stones{
+                .item .contents{
+                    .description{
+                        font-size: 1rem;
+                    }
+                    .count{
+                        font-size: 1.5rem;
+                    }
+                } 
+            } 
+        }
         .sec-6{
             .certificates{
                 justify-content: space-around;
@@ -208,7 +220,7 @@
             .certificates{
                 padding: 4rem 4rem;
                 flex-direction: column;
-                gap: 60px;
+                gap: 45px;
                 img{
                     // max-height: 100% !important;
                     // max-width: 100% !important;

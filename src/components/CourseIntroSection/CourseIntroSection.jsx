@@ -1,8 +1,10 @@
 import React from 'react'
 import './CourseIntroSection.scss'
 import FadeInView from '../FadeInView/FadeInView'
+import { useNavigate } from 'react-router-dom'
 
 const CourseIntroSection = () => {
+  const navigate = useNavigate()
   return (
     <div className='course-intro-section'>
       <div className='left'>
@@ -23,8 +25,8 @@ const CourseIntroSection = () => {
             Learn Cutting-Edge Tech: Enroll in government-certified courses in AI and Robotics to stay ahead in today’s tech-driven world.
           </p>
         </FadeInView>
-        <button className='theme-btn2'>
-          Explore
+        <button className='theme-btn2' onClick={()=> navigate('/courses')}>
+          Explore Now
         </button>
         <div className='overlay-vector'>
           <div className='triangle'>
