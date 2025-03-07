@@ -8,6 +8,7 @@ import CourseIntroSection from '../../components/CourseIntroSection/CourseIntroS
 import IconSlider from '../../components/IconSlider/IconSlider'
 import CountUp from 'react-countup'
 import { useInView } from 'react-intersection-observer'
+import INDUSTRIAL_PARTNERS from '../../constants/industrialPartners'
 
 
 const Home = () => {
@@ -15,15 +16,6 @@ const Home = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
-  const INDUSTRIAL_PARTNERS = [
-    "/images/industrial-partners/aws.svg",
-    "/images/industrial-partners/collab.svg",
-    "/images/industrial-partners/microsoft.svg",
-    "/images/industrial-partners/nvidia.svg",
-    "/images/industrial-partners/openai.svg",
-    "/images/industrial-partners/open-robotics.svg",
-    "/images/industrial-partners/ros.svg",
-  ]
   const CERTIFICATIONS = [
     {title: "nsdc", img:"/images/certifications/nsdc.svg"},
     {title: "nvidia", img:"/images/certifications/nvidia.svg"},
