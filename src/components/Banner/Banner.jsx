@@ -5,7 +5,7 @@ import bannerVideoSM from "../../assets/videos/banner-bg.mp4";
 
 const Banner = ({ page }) => {
   return (
-    <div className='banner'>
+    <div className={`banner ${page}`}>
       {page === 'home' ?
         <div className="video-container">
           {/* Large Screen Video */}

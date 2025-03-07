@@ -14,7 +14,7 @@ const AboutUs = () => {
   }, []);
   return (
     <div className='about-us-page'>
-      <Banner />
+      <Banner page={'about'} />
 
       <div className='sec-2'>
         <div className='container mx-auto'>

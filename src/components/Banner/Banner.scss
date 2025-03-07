@@ -4,9 +4,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    // background-color:#0a121d;
     background-color: var(--primary-color);
     position: relative;
     overflow: hidden;
+    // Background image for About Page
+    
     .video-container {
         position: absolute;
         top: 0;
@@ -28,6 +31,12 @@
         line-height: 1.2;
         text-align: center;
         z-index: 1;
+    }
+    &.about {
+        background: url('../../assets/images/about/banner.jpg') no-repeat center center/cover;
+        .title{
+            display: none;
+        }
     }
 }
 @media(max-width:768px) {

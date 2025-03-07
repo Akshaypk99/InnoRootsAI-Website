@@ -1,5 +1,6 @@
 import React from "react";
 import "./PrimaryButton.scss";
+import arrowIcon from '../../assets/images/icons/primary-btn-arrow.svg'
 
 const PrimaryButton = ({ text }) => {
   return (
@@ -9,7 +10,7 @@ const PrimaryButton = ({ text }) => {
       </button>
       <span className="bg-effect"></span>
       <div className="arrow-icon">
-        <img src="/images/icons/primary-btn-arrow.svg" alt="arrow" />
+        <img src={arrowIcon} alt="arrow" />
       </div>
     </div>
   );
