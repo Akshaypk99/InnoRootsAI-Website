@@ -2,6 +2,7 @@ import React from 'react'
 import './AboutSection.scss'
 import FadeInView from '../FadeInView/FadeInView'
 import { useNavigate } from 'react-router-dom'
+import aboutImage from "../../assets/images/home/about.jpg";
 
 const AboutSection = () => {
   const navigate = useNavigate()
@@ -19,7 +20,7 @@ const AboutSection = () => {
         </button>
       </div>
       <div className='img-container'>
-        <img src='/images/home/about.jpg' alt='about-us' />
+        <img src={aboutImage} alt='about-us' />
       </div>
     </div>
   )

@@ -2,6 +2,7 @@ import React from 'react'
 import './CourseIntroSection.scss'
 import FadeInView from '../FadeInView/FadeInView'
 import { useNavigate } from 'react-router-dom'
+import aiVideo from "../../assets/videos/ai-video.mp4";
 
 const CourseIntroSection = () => {
   const navigate = useNavigate()
@@ -9,7 +10,7 @@ const CourseIntroSection = () => {
     <div className='course-intro-section'>
       <div className='left'>
         <video width="100%" autoPlay loop muted playsInline className='bg-video'>
-          <source src="/videos/ai-video.mp4" type="video/mp4" />
+          <source src={aiVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>

@@ -9,6 +9,8 @@ import IconSlider from '../../components/IconSlider/IconSlider'
 import CountUp from 'react-countup'
 import { useInView } from 'react-intersection-observer'
 import INDUSTRIAL_PARTNERS from '../../constants/industrialPartners'
+import MILESTONES from '../../constants/milestones'
+import CERTIFICATIONS from '../../constants/certifications'
 
 
 const Home = () => {
@@ -16,19 +18,6 @@ const Home = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
-  const CERTIFICATIONS = [
-    {title: "nsdc", img:"/images/certifications/nsdc.svg"},
-    {title: "nvidia", img:"/images/certifications/nvidia.svg"},
-    {title: "nsme", img:"/images/certifications/nsme.svg"},
-    {title: "nasscom", img:"/images/certifications/nasscom.svg"},
-    {title: "ctds", img:"/images/certifications/ctds.svg"},
-  ]
-  const milestones = [
-    { img: "/images/home/icons/students.svg", count: 7000, label: "Students", showPlus: true, duration: 2.5 },
-    { img: "/images/home/icons/course.svg", count: 50, label: "Courses", showPlus: true, duration: 1 },
-    { img: "/images/home/icons/certificates.svg", count: 3000, label: "Certificates Issued", showPlus: true, duration: 2.5 },
-    { img: "/images/home/icons/affiliation.svg", count: 8, label: "Affiliations", showPlus: false, duration: 1 },
-  ];
 
 
   return (
@@ -49,7 +38,7 @@ const Home = () => {
         {/* <FadeInView> */}
         <div className="container">
           <div className='mile-stones'>
-            {milestones.map((item, index) => {
+            {MILESTONES.map((item, index) => {
               const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
               return (
                 <div className="item" key={index} ref={ref}>

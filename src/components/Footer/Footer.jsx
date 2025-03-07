@@ -2,6 +2,9 @@ import React from 'react'
 import { useNavigate } from "react-router-dom";
 import './Footer.scss'
 import ExploreButton from '../ExploreButton/ExploreButton';
+import logo from '../../assets/logo.svg'
+import menuArrow from '../../assets/images/icons/menu-arrow.svg'
+import FOOTER_SM_ICONS from '../../constants/images';
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -10,10 +13,10 @@ const Footer = () => {
     <div className='footer'>
       <div className='left'>
         <div className="logo-container">
-          <img className='logo' src='/logo.svg' alt='logo' />
+          <img className='logo' src={logo} alt='logo' />
         </div>
         <div className="text">
-          Discover the <br/>
+          Discover the <br />
           Future with InnoRoots AI
         </div>
         {/* <div className='explore-btn'>
@@ -25,30 +28,30 @@ const Footer = () => {
         <ExploreButton text={"Explore Now"} />
       </div>
       <ul className='menu-options'>
-        <li onClick={() => { navigate('/')}}>
+        <li onClick={() => { navigate('/') }}>
           Home
-          <img src='/images/icons/menu-arrow.svg' />
+          <img src={menuArrow} />
         </li>
-        <li  onClick={() => { navigate('/about-us')}}>
+        <li onClick={() => { navigate('/about-us') }}>
           About
-          <img src='/images/icons/menu-arrow.svg' />
+          <img src={menuArrow} />
         </li>
-        <li onClick={() => { navigate('/courses')}}>
+        <li onClick={() => { navigate('/courses') }}>
           Courses
-          <img src='/images/icons/menu-arrow.svg' />
+          <img src={menuArrow} />
         </li>
-        <li className='seperator'  onClick={() => { navigate('/contact')}}>
+        <li className='seperator' onClick={() => { navigate('/contact') }}>
           Contact Us
-          <img src='/images/icons/menu-arrow.svg' />
+          <img src={menuArrow} />
         </li>
 
         <li>
           Privacy Policy
-          <img src='/images/icons/menu-arrow.svg' />
+          <img src={menuArrow} />
         </li>
         <li>
           Terms & Conditions
-          <img src='/images/icons/menu-arrow.svg' />
+          <img src={menuArrow} />
         </li>
       </ul>
       <div className="right">
@@ -63,13 +66,13 @@ const Footer = () => {
         <div className='sm-btns'>
           <div className='credits'>
             <div className='icons'>
-              <img src='/images/footer/sm-5.svg' />
-              <img src='/images/footer/x.svg' />
-              <img src='/images/footer/yt.svg' />
-              <img src='/images/footer/linkedin.svg' />
-              <img src='/images/footer/fb.svg' />
-              <img src='/images/footer/ig.svg' />
-              <img src='/images/footer/sm-4.svg' />
+              <img src={FOOTER_SM_ICONS.sm5} alt="sm-5" />
+              <img src={FOOTER_SM_ICONS.xIcon} alt="X" />
+              <img src={FOOTER_SM_ICONS.yt} alt="YouTube" />
+              <img src={FOOTER_SM_ICONS.linkedin} alt="LinkedIn" />
+              <img src={FOOTER_SM_ICONS.fb} alt="Facebook" />
+              <img src={FOOTER_SM_ICONS.ig} alt="Instagram" />
+              <img src={FOOTER_SM_ICONS.sm4} alt="sm-4" />
             </div>
             © 2025 All rights reserved
           </div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./NavBar.scss";
 import { useLocation, useNavigate } from "react-router-dom";
+import logo from '../../assets/logo-dark.svg'
 
 const NavBar = () => {
   const location = useLocation();
@@ -38,7 +39,7 @@ const NavBar = () => {
   return (
     <div className={`navbar-container ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-left">
-        <img className='logo' src={'/logo-dark.svg'} alt="logo" />
+        <img className='logo' src={logo} alt="logo" />
       </div>
 
       {/* Hamburger Menu Button */}
