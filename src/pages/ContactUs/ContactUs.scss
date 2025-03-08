@@ -65,13 +65,17 @@
                         label {
                           position: absolute;
                           left: 0;
-                          top: 25%;
-                          transform: translateY(-50%);
+                          top: 20%;
+                          transform: translateY(-30%);
                           font-size: 16px;
                           color: #37508aa7;
                           transition: all 0.3s;
                         //   background: white;
                           padding: 0 12px;
+                        }
+                        .error{
+                            font-size: 0.8rem;
+                            color: #df1f1f;
                         }
                       }
                 }

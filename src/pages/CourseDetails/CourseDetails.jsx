@@ -18,6 +18,9 @@ const CourseDetails = () => {
   if (!course) {
     return <Navigate to="/invalid-page" replace />; // Redirect if course is not found
   }
+  const handleCallNow = () => {
+    window.location.href = "tel:+919744553926"; // Replace with the actual phone number
+  };
 
   return (
     <div className='course-details-page'>
@@ -108,12 +111,12 @@ const CourseDetails = () => {
                   ON JOB TRAINING <br />
                   12 MONTHS
                 </div>
-                <div className="item">
+                {/* <div className="item">
                   TOTAL DURATION <br />
                   22 MONTHS
-                </div>
+                </div> */}
                 <div className="d-flex justify-content-center align-items-center">
-                  <PrimaryButton text={'CALL NOW'} />
+                  <PrimaryButton text={'CONTACT US'} onClick={()=>navigate('/contact')} />
                 </div>
               </div>
             </div>

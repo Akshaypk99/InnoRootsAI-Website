@@ -26,7 +26,7 @@ const Home = () => {
 
       <div className='sec-2'>
         <div className='container mx-auto'>
-          <AboutSection />
+          <AboutSection source={'home'} />
         </div>
         <OfferingsSection />
       </div>

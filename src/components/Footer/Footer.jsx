@@ -25,7 +25,7 @@ const Footer = () => {
             <img src='/images/icons/button-arrow.svg' alt='arrow'/>
           </div>
         </div> */}
-        <ExploreButton text={"Explore Now"} onClick={()=> navigate('/courses')} />
+        <ExploreButton text={"Explore Now"} onClick={() => navigate('/courses')} />
       </div>
       <ul className='menu-options'>
         <li onClick={() => { navigate('/') }}>
@@ -56,12 +56,23 @@ const Footer = () => {
       </ul>
       <div className="right">
         <div className="info">
-          <div> Infolks Pvt. Ltd.</div>
-          <div> Infolks Tower, Mannarkkad, Kerala, India, 678583</div>
+          <div className='mb-1'> InnoRoots AI Pvt. Ltd.</div>
+          <div> Opposite MES Kalladi College,
+            <br /> Mannarkkad, Kerala, India, 678583</div>
         </div>
         <div className="career">
-          <div> Career : +91 70258 89922</div>
-          <div> Career : hr@infolks.in</div>
+          <div className='contact d-flex'>
+            Contact :
+            <div className="ms-1 phone d-flex flex-column">
+              <div className="">
+                +91 97445 53975
+              </div>
+              <div className="">
+                +91 97445 53926
+              </div>
+            </div>
+          </div>
+          <div> Email : innorootsai@gmail.com</div>
         </div>
         <div className='sm-btns'>
           <div className='credits'>

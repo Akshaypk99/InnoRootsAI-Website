@@ -38,13 +38,8 @@
             display: none;
         }
     }
-    &.courses {
-        // background: url('../../assets/images/courses/ai-ml.jpg') no-repeat center center/cover;
-        background: url('../../assets/images/courses/ai-robotics-banner.jpg') no-repeat center center/cover;
-        // background: url('../../assets/images/courses/ai-robotics-2.jpg') no-repeat center center/cover;
-        .title{
-            display: none;
-        }
+    &.contact{
+        height: 660px;
     }
 }
 @media(max-width:768px) {
@@ -54,6 +49,10 @@
             line-height: 1.2;
             text-align: center;
             z-index: 1;
+        }
+        &.contact{
+            height: 530px;
+            min-height: 530px;
         }
     }
 }

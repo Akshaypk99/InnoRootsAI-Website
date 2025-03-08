@@ -5,7 +5,7 @@ const CourseDetailsBanner = ({ course }) => {
   return (
     <div className={`course-details-banner`}
       style={{
-        backgroundImage: `url(${course.banner_img})`,
+        backgroundImage: `url(${window.innerWidth < 678 ? course.banner_img_mob : course.banner_img})`,
       }}>
       <div className="container">
         <div className='title'>

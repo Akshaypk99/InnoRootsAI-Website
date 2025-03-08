@@ -122,11 +122,11 @@
               background-color: var(--secondary-color);
               display: flex;
               flex-direction: column;
-              justify-content: space-between;
+              justify-content: space-around;
               .item{
                 font-size: 1.5rem;
                 line-height: 1.1;
-                padding: 12px 0;
+                padding: 12px 0 2rem;
                 border-bottom: 1px solid #95A5CB;
                 text-align: center;
               }

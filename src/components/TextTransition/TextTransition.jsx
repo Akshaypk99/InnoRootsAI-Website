@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './TextTransition.scss';
 
-const TextTransition = ({ text, speed = 0.03 }) => {
+const TextTransition = ({ text, speed = 0.01 }) => {
     const [glowText, setGlowText] = useState([]);
     const textRef = useRef(null);
 

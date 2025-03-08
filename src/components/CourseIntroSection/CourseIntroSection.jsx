@@ -3,6 +3,8 @@ import './CourseIntroSection.scss'
 import FadeInView from '../FadeInView/FadeInView'
 import { useNavigate } from 'react-router-dom'
 import aiVideo from "../../assets/videos/ai-video.mp4";
+import SecondaryButton from '../SecondaryButton/SecondaryButton';
+import ExploreButton2 from '../ExploreButton2/ExploreButton2';
 
 const CourseIntroSection = () => {
   const navigate = useNavigate()
@@ -26,9 +28,8 @@ const CourseIntroSection = () => {
             Learn Cutting-Edge Tech: Enroll in government-certified courses in AI and Robotics to stay ahead in today’s tech-driven world.
           </p>
         </FadeInView>
-        <button className='theme-btn2' onClick={()=> navigate('/courses')}>
-          Explore Now
-        </button>
+        <ExploreButton2 text={'Explore Now'} onClick={() => navigate('/courses')} />
+        {/* <SecondaryButton text={'Explore Now'} onClick={() => navigate('/courses')} /> */}
         <div className='overlay-vector'>
           <div className='triangle'>
 

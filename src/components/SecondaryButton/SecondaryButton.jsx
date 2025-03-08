@@ -1,10 +1,10 @@
 import React from "react";
-import "./PrimaryButton.scss";
+import "./SecondaryButton.scss";
 import arrowIcon from '../../assets/images/icons/primary-btn-arrow.svg'
 
-const PrimaryButton = ({ text, onClick }) => {
+const SecondaryButton = ({ text, onClick }) => {
   return (
-    <div className="primary-btn-container">
+    <div className="secondary-btn-container">
       <button className="primary-btn" onClick={onClick}>
         <span>{text}</span>
       </button>
@@ -16,4 +16,4 @@ const PrimaryButton = ({ text, onClick }) => {
   );
 };
 
-export default PrimaryButton;
+export default SecondaryButton;
