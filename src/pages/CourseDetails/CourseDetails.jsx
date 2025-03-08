@@ -6,6 +6,7 @@ import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import bulletIcon from '../../assets/images/icons/list-bullet.svg'
 import PrimaryButton from '../../components/PrimaryButton/PrimaryButton'
 import COURSES from '../../constants/courses'
+import CourseDetailsBanner from '../../components/CourseDetailsBanner/CourseDetailsBanner'
 
 const CourseDetails = () => {
   const navigate = useNavigate()
@@ -20,7 +21,7 @@ const CourseDetails = () => {
 
   return (
     <div className='course-details-page'>
-      <Banner />
+      <CourseDetailsBanner course={course} />
 
       <div className='sec-2'>
         <div className="container mx-auto">

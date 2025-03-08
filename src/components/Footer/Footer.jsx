@@ -25,7 +25,7 @@ const Footer = () => {
             <img src='/images/icons/button-arrow.svg' alt='arrow'/>
           </div>
         </div> */}
-        <ExploreButton text={"Explore Now"} />
+        <ExploreButton text={"Explore Now"} onClick={()=> navigate('/courses')} />
       </div>
       <ul className='menu-options'>
         <li onClick={() => { navigate('/') }}>

@@ -28,7 +28,7 @@ const MissionVision = () => {
         </div>
         <div className="img-container">
           <p>
-          Deliver affordable, industry-aligned training<br class="d-none d-xxl-block"/> programs to foster innovation and employability
+          Deliver affordable, industry-aligned training<br className="d-none d-xxl-block"/> programs to foster innovation and employability
           </p>
         </div>
       </div>

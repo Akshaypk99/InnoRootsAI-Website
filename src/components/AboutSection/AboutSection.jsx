@@ -15,7 +15,7 @@ const AboutSection = () => {
         <FadeInView>
           <p>InnoRootsAI is a pioneering initiative in robotics and AI education, dedicated to fostering innovation, creativity, and technological expertise. As a provider of comprehensive training solutions, we aim to equip individuals and communities with the skills and knowledge needed to thrive in the rapidly evolving fields of robotics and artificial intelligence. At InnoRoots, we believe that technology should be an enabler for everyone, regardless of background or expertise.</p>
         </FadeInView>
-        <button className='theme-btn' onClick={()=> navigate('/courses')}>
+        <button className='theme-btn' onClick={()=> navigate('/about-us')}>
           Learn more
         </button>
       </div>

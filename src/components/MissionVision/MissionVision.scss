@@ -45,7 +45,17 @@
         }
     }
 }
+@media(max-width:991px) {
+    .mission-vision{
+        .card{
+            .img-container{
+                height: 250px;
+                padding: 1.5rem;
+            }
+        }
+    }
 
+}
 @media(max-width:768px) {
     .mission-vision{
         display: flex;
