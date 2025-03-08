@@ -30,55 +30,53 @@
                     border-right: 1px solid #37508a45;
                     padding-right: 35px;
                     margin-bottom: 20px;
+                    .row{
+                        width: 100%;
+                    }
+                    .form-group {
+                        position: relative;
+                        margin-bottom: 20px;
+                        // width: 100%;
+                        &.last{
+                            margin-bottom: 0;
+                        }
+                        input, textarea {
+                          width: 100%;
+                          padding: 12px 0 5px 0;
+                          border: none;
+                          border-bottom: 1px solid #37508a61;
+                          border-radius: 0;
+                          font-size: 16px;
+                          outline: none;
+                          transition: border-color 0.3s;
+                          color: #37508A;
+                          &:focus {
+                            border-color: #37508A;
+                          }
+                      
+                          &:focus + label,
+                          &:not(:placeholder-shown) + label {
+                            top: -5px;
+                            font-size: 13px;
+                            color: #37508A;
+                          }
+                        }
+                      
+                        label {
+                          position: absolute;
+                          left: 0;
+                          top: 25%;
+                          transform: translateY(-50%);
+                          font-size: 16px;
+                          color: #37508aa7;
+                          transition: all 0.3s;
+                        //   background: white;
+                          padding: 0 12px;
+                        }
+                      }
                 }
             }
-            .form-group {
-                position: relative;
-                margin-bottom: 20px;
-                width: 100%;
-                &.last{
-                    margin-bottom: 0;
-                }
-                input, textarea {
-                  width: 100%;
-                  padding: 12px 0 5px 0;
-                  border: none;
-                  border-bottom: 1px solid #37508a61;
-                  border-radius: 0;
-                  font-size: 16px;
-                  outline: none;
-                  transition: border-color 0.3s;
-                  color: #37508A;
-                  &:focus {
-                    border-color: #37508A;
-                  }
-              
-                  &:focus + label,
-                  &:not(:placeholder-shown) + label {
-                    top: -5px;
-                    font-size: 13px;
-                    color: #37508A;
-                  }
-                }
-              
-                label {
-                  position: absolute;
-                  left: 0;
-                  top: 25%;
-                  transform: translateY(-50%);
-                  font-size: 16px;
-                  color: #37508aa7;
-                  transition: all 0.3s;
-                //   background: white;
-                  padding: 0 12px;
-                }
-              }
-              
-              .row {
-                display: flex;
-                // gap: 30px;
-              }
-              
+            
               textarea {
                 resize: none;
               }  
@@ -86,8 +84,11 @@
                 display: flex;
                 width: 70%;
                 padding-right: 35px;
+                position: relative;
+                right: 20px;
                 justify-content: flex-end;
                 &.mobile{
+                    right: 0;
                     display: none;
                 }
               }

@@ -1,18 +1,22 @@
 import React, { useEffect } from 'react'
 import './CourseDetails.scss'
 import Banner from '../../components/Banner/Banner'
-import OfferingsSection from '../../components/OfferingsSection/OfferingsSection'
-import AboutSection from '../../components/AboutSection/AboutSection'
 import FadeInView from '../../components/FadeInView/FadeInView'
-import { useParams } from 'react-router-dom'
+import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import bulletIcon from '../../assets/images/icons/list-bullet.svg'
 import PrimaryButton from '../../components/PrimaryButton/PrimaryButton'
+import COURSES from '../../constants/courses'
 
 const CourseDetails = () => {
+  const navigate = useNavigate()
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
-  const { title } = useParams();
+  const { id } = useParams(); // Get the course ID from the URL
+  const course = COURSES.find((course) => course.id === id);
+  if (!course) {
+    return <Navigate to="/invalid-page" replace />; // Redirect if course is not found
+  }
 
   return (
     <div className='course-details-page'>
@@ -21,7 +25,16 @@ const CourseDetails = () => {
       <div className='sec-2'>
         <div className="container mx-auto">
           <FadeInView>
-            <div className='main-title'>{decodeURIComponent(title)}</div>
+            <div className='main-title'>
+              {course.title.includes("Diploma in") ? (
+                <>
+                  Diploma in <br />
+                  {course.title.replace("Diploma in ", "")}
+                </>
+              ) : (
+                course.title
+              )}
+            </div>
           </FadeInView>
           <div className="container course-details-section">
             <div className="first-row">
@@ -29,81 +42,39 @@ const CourseDetails = () => {
                 <div className="desc-title">
                   Course Description:
                 </div>
-                <p>
-                  This immersive program covers the core principles of robotics and artificial intelligence, with a strong emphasis on hands-on learning. Participants will learn to build, program, and control robots while integrating AI for navigation and vision. The course includes modern tools like ROS (Robot Operating System) for scalable robotics solutions.
+                <p className='desc'>
+                  {course.description}
                 </p>
                 <div className="mt-2">
                   <div className="sub-heading">
                     Key Benefits & Learning Outcomes:
                   </div>
                   <div className="key-list">
-                    <div className="item">
-                      <img src={bulletIcon} alt='icon' />
-                      <p>
-                        Design, program, and assemble robots from scratch.
-                      </p>
-                    </div>
-                    <div className="item">
-                      <img src={bulletIcon} alt='icon' />
-                      <p>
-                        Master robotics control and AI integration for navigation and vision.
-                      </p>
-                    </div>
-                    <div className="item">
-                      <img src={bulletIcon} alt='icon' />
-                      <p>
-                        Build functional robots, including line-following, robotic arm , obstacle-avoiding, and voice-controlled robots.
-                      </p>
-                    </div>
-                    <div className="item">
-                      <img src={bulletIcon} alt='icon' />
-                      <p>
-                        Gain experience with ROS to manage complex robotics systems.
-                      </p>
-                    </div>
+                    {course?.key_benefits.map((benefit, index) => (
+                      <div className="item" key={index}>
+                        <img src={bulletIcon} alt='icon' />
+                        <p>{benefit}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
 
-                <div className="mt-2">
+                <div className="tech-stack">
                   <div className="sub-heading">
                     Tech Stacks Covered:
                   </div>
                   <div className="key-list">
-                    <div className="item">
-                      <img src={bulletIcon} alt='icon' />
-                      <p>
-                        Programming: Python, Arduino IDE, C++
-                      </p>
-                    </div>
-                    <div className="item">
-                      <img src={bulletIcon} alt='icon' />
-                      <p>
-                        Hardware: Arduino microcontrollers, ESP32, Jetson Nano, Raspberry Pi, sensors (ultrasonic, motion, etc.), actuators, motors
-                      </p>
-                    </div>
-                    <div className="item">
-                      <img src={bulletIcon} alt='icon' />
-                      <p>
-                        Libraries/Tools: OpenCV, PyTorch, ROS (Robot Operating System)
-                      </p>
-                    </div>
-                    <div className="item">
-                      <img src={bulletIcon} alt='icon' />
-                      <p>
-                        Platforms: Raspberry Pi, NVIDIA Jetson Nano, Arduino, ESP32
-                      </p>
-                    </div>
-                    <div className="item">
-                      <img src={bulletIcon} alt='icon' />
-                      <p>
-                        Simulators: Gazebo for testing robotics designs
-                      </p>
-                    </div>
+                    {course?.tech_stacks.map((tech, index) => (
+                      <div className="item" key={index}>
+                        <img src={bulletIcon} alt='icon' />
+                        <p>{tech}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
-
               </div>
               <div className="image-container">
+                <img src={course.detail_img_url} alt={course.id} />
               </div>
             </div>
 

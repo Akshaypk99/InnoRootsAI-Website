@@ -1,34 +1,27 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 const useIntersectionObserver = (threshold = 0.1) => {
-    const ref = useRef(null);
-  
-    useEffect(() => {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          } else {
-            entry.target.classList.remove("visible");
-          }
-        },
-        { threshold }
-      );
-  
-      if (ref.current) {
-        observer.observe(ref.current);
-      }
-  
-      return () => {
-        if (ref.current) {
-          observer.unobserve(ref.current);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry], obs) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          obs.unobserve(entry.target); // Stop observing after first intersection
         }
-      };
-    }, [threshold]);
-  
-    return ref;
-  };
-  
-  export default useIntersectionObserver;
-  
-  
+      },
+      { threshold }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [threshold]);
+
+  return ref;
+};
+
+export default useIntersectionObserver;

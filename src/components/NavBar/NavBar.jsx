@@ -39,7 +39,7 @@ const NavBar = () => {
   return (
     <div className={`navbar-container ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-left">
-        <img className='logo' src={logo} alt="logo" />
+        <img className='logo' src={logo} alt="logo" onClick={()=> navigate('/')} />
       </div>
 
       {/* Hamburger Menu Button */}

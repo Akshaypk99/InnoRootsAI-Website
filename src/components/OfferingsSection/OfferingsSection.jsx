@@ -7,7 +7,7 @@ const OfferingsSection = () => {
   return (
     <div className='offerings-section'>
       <FadeInView>
-        <div className='sub-title'>We are offering AI, ML and Robotics</div>
+        <div className='sub-title'>We are offering AI, ML and Robotic</div>
         <h5>COURSES</h5>
       </FadeInView>
       {/* <FadeInView>

@@ -22,9 +22,11 @@ const Layout = () => {
           <Route path="/" element={<Home />} />
           <Route path="about-us" element={<AboutUs />} />
           <Route path="courses" element={<Courses />} />
-          <Route path="courses/:title" element={<CourseDetails />} />
+          <Route path="courses/:id" element={<CourseDetails />} />
           <Route path="contact" element={<ContactUs />} />
+          <Route path="invalid-page" element={<InvalidPage />} />
           <Route path="*" element={<InvalidPage />} />
+
         </Routes >
         <Footer />
       </div>

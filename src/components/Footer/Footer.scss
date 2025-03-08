@@ -75,7 +75,9 @@
           cursor: pointer;
           transition: all .3s ease-in-out;
           &:hover{
-            transform: scale(1.05);
+            // transform: scale(1.05);
+            filter: brightness(0) saturate(100%) invert(30%) sepia(100%) saturate(700%) hue-rotate(190deg);
+
           }
         }
       }
@@ -133,6 +135,7 @@
     // flex-direction: column;
     gap: 40px;
     .left{
+      flex: none;
       font-size: calc(16px + 4 * (100vw - 320px) / 1600);
       .explore-btn{
         font-size: calc(17px + 4 * (100vw - 320px) / 1600);

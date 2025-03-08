@@ -110,6 +110,9 @@ p {
 h5{
   font-size: 2.5rem;
 }
+.container{
+  margin: 0 auto;
+}
 .mx-auto {
 	margin-left: auto;
 	margin-right: auto;
@@ -130,7 +133,7 @@ h5{
 }
 .theme-btn{
   font-size: calc(13px + 3 * (100vw - 320px) / 1600);
-  padding: calc(5px + .1875vw) calc(14px + .5vw);
+  padding: calc(5px + .1875vw) calc(18px + .5vw);
   border: none;
   border-radius: 20px;
   background-color: var(--primary-color);
@@ -138,6 +141,7 @@ h5{
   cursor: pointer;
   /* letter-spacing: 0.1rem; */
   font-weight: 400;
+  line-height: normal;
 }
 .theme-btn2{
   background-color: #000;
@@ -160,6 +164,7 @@ h5{
 @media(max-width:768px) {
   .container{
     max-width: 90%;
+    margin: 0 auto;
     padding: 0;
   }
 
@@ -184,6 +189,9 @@ h5{
 }
 
 @media (min-width: 1400px){
+  /* .container{
+    max-width: 1531px;
+  } */
   p{
     font-size: 1.1rem;
     line-height: 1.3;

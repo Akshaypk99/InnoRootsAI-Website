@@ -39,3 +39,12 @@
     }
 
 }
+@media(min-width:1400px) {
+    .offerings-section{
+        max-width: 1531px;
+        margin: 0 auto;
+        p{
+            max-width: 890px;
+        }
+    }
+}

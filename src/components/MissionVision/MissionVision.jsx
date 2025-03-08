@@ -14,7 +14,9 @@ const MissionVision = () => {
           </div>
         </div>
         <div className="img-container">
-          {/* <img /> */}
+          <p>
+          Democratize AI by empowering every individual, regardless of background, with accessible education and tools, fostering a global workforce that ethically innovates and solves humanity’s most pressing challenges at their roots.
+          </p>
         </div>
       </div>
       <div className="card">
@@ -25,7 +27,9 @@ const MissionVision = () => {
           </div>
         </div>
         <div className="img-container">
-          {/* <img /> */}
+          <p>
+          Deliver affordable, industry-aligned training<br class="d-none d-xxl-block"/> programs to foster innovation and employability
+          </p>
         </div>
       </div>
     </div>

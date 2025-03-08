@@ -13,6 +13,7 @@
         margin-bottom: 4rem;
         .main-title{
             text-align: center;
+            text-transform: initial;
             line-height: 1.2;
         }
         .course-details-section {
@@ -29,11 +30,14 @@
                   font-size: 1.65rem;
                   line-height: 1.2;
               }
+              .tech-stack{
+                margin-top: 1rem;
+              }
               .sub-heading{
                   font-weight: 400;
                   font-size: 1.5rem;
                   line-height: 1.2;
-                  margin-bottom: 5px;
+                  margin-bottom: .75rem;
               }
               .key-list{
                   display: flex;
@@ -55,11 +59,16 @@
               }
             }
             .image-container{
-              height: 500px;
+              height: auto;
               width: 450px;
               // margin: 15px;
               // padding: 0;
               background-color: var(--secondary-color);
+              img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
             }
             .form-section{
               border: 1px solid #37508A;
@@ -165,19 +174,44 @@
                 order: 1;
                 width: 100%;
                 margin-top: 1rem;
+                margin-bottom: 2rem;
+                height: auto;
               }
           
               .description {
                 order: 2;
+                max-width: 90%;
+                margin: 0 auto;
+                .desc-title{
+                  text-align: center;
+                  font-size: 1.5rem;
+                  font-weight: 500;
+                }
+                p.desc{
+                  text-align: center;
+                  margin-bottom: 2rem;
+                }
+                .sub-heading{
+                  font-size: 1.4rem;
+                  max-width: 80%;
+                }
+                
               }
           
               .form-section {
                 order: 3;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
               }
           
               .duration {
                 order: 4;
                 width: 100%;
+                padding: 1.5rem;
+                .item{
+                  font-size: 1.15rem;
+                  padding: 12px 0;
+                }
               }
             }
           }
@@ -194,6 +228,9 @@
 @media(max-width:991px) {
     .course-details-page{
         .sec-2{
+          .container.course-details-section{
+            max-width: 100%;
+          }
         }
 }
 }
@@ -202,6 +239,7 @@
         .sec-2{
             border-radius: 0;
             top: 0;
+            margin-bottom: 3rem;
         }
 }
 }

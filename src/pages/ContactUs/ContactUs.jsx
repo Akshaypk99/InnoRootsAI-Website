@@ -13,70 +13,79 @@ const ContactUs = () => {
       <Banner />
 
       <div className='sec-2'>
-
-        <div className='contact-form'>
-          <div className='main-title'>
-            SHARE YOUR DETAILS
-          </div>
-          <div className='form-section'>
-            <form >
-              {/* Name & Company in One Row */}
-              <div className='row'>
-                <div className="form-group">
-                  <input type="text" id="name" placeholder=" " required />
-                  <label htmlFor="name">Name</label>
-                </div>
-                <div className="form-group">
-                  <input type="text" id="company" placeholder=" " required />
-                  <label htmlFor="company">Company Name</label>
-                </div>
-              </div>
-
-              {/* Email & Contact Number in One Row */}
-              <div className='row'>
-                <div className="form-group">
-                  <input type="email" id="email" placeholder=" " required />
-                  <label htmlFor="email">Email</label>
-                </div>
-                <div className="form-group">
-                  <input type="tel" id="phone" placeholder=" " required />
-                  <label htmlFor="phone">Contact Number</label>
-                </div>
-              </div>
-              {/* Message Textarea */}
-              <div className='row'>
-                <div className="form-group last">
-                  <textarea id="message" placeholder=" " required rows="4"></textarea>
-                  <label htmlFor="message">Message</label>
-                </div>
-              </div>
-            </form>
-            <div className='btn-container mobile'>
-              <PrimaryButton text={'SUBMIT'} />
+        <div className="container">
+          <div className='contact-form'>
+            <div className='main-title'>
+              SHARE YOUR DETAILS
             </div>
-            <div className='contact-info'>
-              <div className="item">
-                <div className="title">
-                  Call Us
+            <div className='form-section'>
+              <form >
+                {/* Name & Place in One Row */}
+                <div className='row'>
+                  <div className="col-lg-6 form-group">
+                    <input type="text" id="name" placeholder=" " required />
+                    <label htmlFor="name">Name</label>
+                  </div>
+                  <div className="col-lg-6 form-group">
+                    <input type="text" id="place" placeholder=" " required />
+                    <label htmlFor="place">Place</label>
+                  </div>
                 </div>
-                <div className="value">
-                  +91 70258 89911
+
+                {/* Email & Contact Number in One Row */}
+                <div className='row'>
+                  <div className="col-lg-6 form-group">
+                    <input type="email" id="email" placeholder=" " required />
+                    <label htmlFor="email">Email</label>
+                  </div>
+                  <div className="col-lg-6 form-group">
+                    <input type="tel" id="phone" placeholder=" " required />
+                    <label htmlFor="phone">Contact Number</label>
+                  </div>
+                </div>
+                {/* Message Textarea */}
+                <div className='row'>
+                  <div className="form-group last">
+                    <textarea id="message" placeholder=" " required rows="4"></textarea>
+                    <label htmlFor="message">Message</label>
+                  </div>
+                </div>
+              </form>
+              <div className="row">
+                <div className="form-group m-0">
+                  <div className='btn-container mobile'>
+                    <PrimaryButton text={'SUBMIT'} />
+                  </div>
                 </div>
               </div>
-              <div className="item">
-                <div className="title">
-                  Mail Us
+              <div className='contact-info'>
+                <div className="item">
+                  <div className="title">
+                    Call Us
+                  </div>
+                  <div className="value">
+                    +91 70258 89911
+                  </div>
                 </div>
-                <div className="value">
-                  customersupport@infolks.in
+                <div className="item">
+                  <div className="title">
+                    Mail Us
+                  </div>
+                  <div className="value">
+                    customersupport@infolks.in
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className='btn-container'>
-            <PrimaryButton text={'SUBMIT'} />
-          </div>
+            <div className='btn-container'>
+              <div className="row">
+                <div className="form-group m-0">
+                  <PrimaryButton text={'SUBMIT'} />
+                </div>
+              </div>
+            </div>
 
+          </div>
         </div>
 
       </div>

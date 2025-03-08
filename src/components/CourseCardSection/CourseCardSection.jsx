@@ -1,26 +1,34 @@
 import React from 'react'
 import './CourseCardSection.scss'
 import { useNavigate } from 'react-router-dom'
+import ExploreButton from '../ExploreButton/ExploreButton'
+import COURSES from '../../constants/courses'
+
 
 const CourseCardSection = () => {
   const navigate = useNavigate()
-  const courses = [
-    { "title": "DIPLOMA IN ROBOTICS & ARTIFICIAL INTELLIGENCE", image_url: '' },
-    { "title": "DIPLOMA IN MACHINE LEARNING & ARTIFICIAL INTELLIGENCE", image_url: '' },
-  ]
+
   return (
     <div className='course-card-container'>
-      {courses?.map((item, index) => (
-        <div className="card" key={index}
-          onClick={() => navigate(`/courses/${encodeURIComponent(item.title)}`)} >
-          <div className="title-section">
-            <div className="main-title">
-              {item.title}
+      {COURSES?.map((item, index) => (
+        <div className='course' key={index}>
+          <div className="card"
+          >
+            <div className="title-section">
+              <div className="main-title">
+                {item.title}
+              </div>
+            </div>
+            <div className="img-container">
+              <img src={item.image_url} alt={index} />
             </div>
           </div>
-          <div className="img-container">
-            {/* <img /> */}
+          <div className="d-flex justify-content-center align-items-center mt-2">
+            <ExploreButton page={'courses'} text={'Explore Now'}
+              onClick={() => navigate(`/courses/${item.id}`)}
+            />
           </div>
+
         </div>
       ))}
     </div>
