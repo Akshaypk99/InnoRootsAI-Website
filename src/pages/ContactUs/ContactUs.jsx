@@ -65,7 +65,7 @@ const ContactUs = () => {
         body: formDataToSend,
         mode: "no-cors",
       }).then(() => {
-        alert("Message sent successfully!");
+        // alert("Message sent successfully!");
         setFormData({ name: "", email: "", message: "" });
       }).catch(() => alert("Error sending message."));
     }
